@@ -14,9 +14,9 @@
 // for(let vals in myObj){
 //     if(typeof myObj[vals] == "object")
 //     {
-   
+
 //         for(let data in myObj[vals]){
-   
+
 //             console.log(data+" -> "+myObj[vals][data])
 //         }
 //     }
@@ -42,7 +42,7 @@
 
 // function abc(name , gender , pronoun)
 // {
-  
+
 //     this.name=name;
 //     this.gender=gender;
 //     this.pronoun=pronoun;
@@ -51,21 +51,56 @@
 
 // let obj= new abc("Karan","M","He/She");
 
-function consfunc(name, gender , city,marks)
-{
-    this.name=name
-    this.gender=gender
-    this.city=city
-    this.marks=marks
-    console.log(this)
-    this.changeMarks = function(){
-        this.marks+=100
+// function consfunc(name, gender , city,marks)
+// {
+//     this.name=name
+//     this.gender=gender
+//     this.city=city
+//     this.marks=marks
+//     console.log(this)
+//     this.changeMarks = function(){
+//         this.marks+=100
+//     }
+// }
+// function teacher(stud)
+// {
+//     stud.changeMarks()
+// }
+// let obj = new consfunc("Karan","M","Delhi",90)
+// teacher.call(this,obj)
+// console.log(obj)
+
+//PROTOTYPE IN JS
+// function foo(){
+// return 0
+// }
+
+
+// console.log(foo.prototype)
+
+// let obj = {
+//     name: "karan",
+// }
+// obj.__proto__.greet = function () {
+//     console.log(`${obj.name} says hello from node environment`)
+// }
+
+// // obj.greet()
+
+// obj.__proto__.meet = function () {
+//     console.log(`${obj.name} is busy right now`)
+// }
+// obj.meet()
+// function Employee(name)
+// {
+//     this.name=name
+// }
+let obj={
+    name:"jaran",
+    printName:function(){
+        console.log(this.name);
     }
+   
 }
-function teacher(stud)
-{
-    stud.changeMarks()
-}
-let obj = new consfunc("Karan","M","Delhi",90)
-teacher.call(this,obj)
-console.log(obj)
+let user = Object.create(obj);
+user.printName()
