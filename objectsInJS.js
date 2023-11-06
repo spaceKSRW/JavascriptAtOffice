@@ -24,18 +24,18 @@
 
 // CREATING A FUNCTION WHICH RETURNS OBJECT
 
-function createObject(name,gender,city)
-{
-    console.log(this);
-   let obj={}
-   obj.name=name;
-   obj.city=city;
-   obj.gender=gender;
-   return obj;
-}
+// function createObject(name,gender,city)
+// {
+//     console.log(this); // global object
+//    let obj={}
+//    obj.name=name;
+//    obj.city=city;
+//    obj.gender=gender;
+//    return obj;
+// }
 
-let obj = createObject("karan","M","Delhi")
-let obj2 =  createObject("ayush","T","Deheradun");
+// let obj = createObject("karan","M","Delhi")
+// let obj2 =  createObject("ayush","T","Deheradun");
 // console.log(obj)
 
 // NOW CREATING A CONSTRUCTOR FUNCTION
@@ -46,8 +46,26 @@ let obj2 =  createObject("ayush","T","Deheradun");
 //     this.name=name;
 //     this.gender=gender;
 //     this.pronoun=pronoun;
-//     console.log("hello "+ this);
+//     console.log(this);
 // }
 
 // let obj= new abc("Karan","M","He/She");
-// // console.log(obj)
+
+function consfunc(name, gender , city,marks)
+{
+    this.name=name
+    this.gender=gender
+    this.city=city
+    this.marks=marks
+    console.log(this)
+    this.changeMarks = function(){
+        this.marks+=100
+    }
+}
+function teacher(stud)
+{
+    stud.changeMarks()
+}
+let obj = new consfunc("Karan","M","Delhi",90)
+teacher.call(this,obj)
+console.log(obj)
