@@ -1,4 +1,2 @@
- // for(let ele in vals)
-        // {
-        //     console.log(vals[ele])
-        // }
+const order = _.orderBy(objs,"salary","desc")
+console.log(order)
