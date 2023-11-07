@@ -203,7 +203,6 @@ const _ = require("lodash");
 // Lodash
 
 //getting elements
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // console.log(_.first(numbers)) // first element
 // console.log(_.last(numbers)) // last element
 
@@ -318,18 +317,72 @@ const objs = [
 
 // grouping by gender and getting the salary sum
 
-let groupByGender = _.groupBy(objs, "gender");
+// let groupByGender = _.groupBy(objs, "gender");
 
 // console.log(groupByGender); // group by returns an object containing objects having list of objects
 
-let totalSalaryByGender = _.map(groupByGender, (grp) => {
-  return _.reduce(
-    grp,
-    (acc, ele) => {
-      return ele.salary + acc;
-    },
-    0
-  );
-});
+// let totalSalaryByGender = _.map(groupByGender, (grp) => {
+//   return _.reduce(
+//     grp,
+//     (acc, ele) => {
+//       return ele.salary + acc;
+//     },
+//     0
+//   );
+// });
 
-console.log(totalSalaryByGender);
+// console.log(totalSalaryByGender);
+
+
+// LODASH continued...
+
+// removes falsy values
+// const arr=["",false,NaN,undefined,null,69];
+// let newarr = _.compact(arr);
+// console.log(newarr)
+
+// concat used to concatenate
+// let arr = [1,2,3,4,5]
+// let newarr = _.concat(arr,[[1],2,3,[[4],5,6,8]]);
+// console.log(newarr)
+
+var users = [
+  { 'user': 'barney',  'active': true },
+  { 'user': 'fred',    'active': false },
+  { 'user': 'pebbles', 'active': false }
+  ,
+  { 'user': 'pebbles', 'active': false }
+  ,
+  { 'user': 'pebbles', 'active': false }
+];
+
+// dropRightWhile removes objects of users=pebbles and active = false
+
+// console.log(users)
+// const ans = _.dropRightWhile(users,{'user':'pebbles','active':false});
+// console.log(ans)
+
+// to find index
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let index = _.indexOf(numbers,7);
+// console.log(index);
+
+// in an object
+//  const index = _.findIndex(users,{'user':'barney'});
+//  console.log(index)
+
+//creating object using pairs
+// let obj = _.fromPairs([['a',1],['b',2]])
+// console.log(obj)
+
+// join : returns joined string
+ let arr=[1,2,3,4,5,6]
+// console.log(_.join(arr,'+')) // 1+2+3+4+5+6
+
+let newar=_.pull(arr,[1,2])
+console.log(newar)
+
+
+
+
+
