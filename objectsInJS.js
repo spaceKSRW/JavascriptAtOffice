@@ -95,12 +95,47 @@
 // {
 //     this.name=name
 // }
-let obj={
-    name:"jaran",
-    printName:function(){
-        console.log(this.name);
-    }
-   
+// let obj={
+//     name:"jaran",
+//     printName:function(){
+//         console.log(this.name);
+//     }
+
+// }
+// let user = Object.create(obj);
+// user.printName()
+
+// function Employee(){
+//     //...
+// }'
+
+let obj = {
+    name: "Karan",
+    address: {
+        city: "Delhi"
+    },
+    greet: function(){
+        console.log(`${this.name} is form ${this.address.city}`);
+    },
+    date : new Date() 
 }
-let user = Object.create(obj);
-user.printName()
+
+//let newobj = { ...obj }  // shallow copy
+// let newobj = Object.assign({},obj) // another technique
+// newobj.name = "amit"
+// newobj.address.city ="UK"
+// console.log(obj.address.city + " " + newobj.address.city) // shallow copy , dono pe reflect hua 
+
+// deep copy
+
+// 1st method : using JSON.stringify , JSON.parse
+
+let newobj = JSON.parse(JSON.stringify(obj));
+
+
+newobj.address.city = "Goa"
+console.log(newobj)
+console.log(obj)
+
+
+
