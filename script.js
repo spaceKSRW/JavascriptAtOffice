@@ -11,9 +11,13 @@ let counter = 0;
 const getData = () => {
   console.log("fetching data..." + counter++);
 };
+
+const getanother=()=>{
+    alert("mat kar ")
+}
 // this magicfunction is debounce method 
 
-const magicfunction = function (getData, d) {
+const magicfunction = function (fn, d) {
     let timer;
   return function () {
     let context = this,
