@@ -380,7 +380,7 @@ var users = [
 // console.log(_.join(arr,'+')) // 1+2+3+4+5+6
 
 let newar=_.pull(arr,[1,2])
-console.log(newar)
+
 
 
 
