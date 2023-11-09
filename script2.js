@@ -1,14 +1,19 @@
 document.querySelector("#grandparent")
 .addEventListener('click',()=>{
     console.log("Grandparent clicked");
-},true);
+},false);
 
 document.getElementById("parent")
 .addEventListener('click',()=>{
     console.log("Parent clicked")
-},true);
+},false);
 
 document.getElementById("child")
-.addEventListener('click',()=>{
+.addEventListener('click',(e)=>{
     console.log("Child Clicked")
-},true); 
+    e.stopPropagation();
+},false); 
+document.getElementById("papa")
+.addEventListener('click',()=>{
+    console.log("Papa Clicked")
+},false); 
