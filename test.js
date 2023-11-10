@@ -170,5 +170,13 @@
 //   let ans={}
 //   for
 // }
+function disp(){
+    console.log("hello world")
+}
+// disp()
+Function.prototype.meet = function(){
+    console.log("meeting at 6pm")
+}
 
 
+disp.meet()
