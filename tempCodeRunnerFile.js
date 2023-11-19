@@ -1,1 +1,1 @@
-  console.log(group(data));
+mainFunc();

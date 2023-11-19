@@ -61,17 +61,19 @@
 //   return customer;
 // }, {});
 // console.log(newobj);
-const promise = new Promise((res,rej)=>{
-  setTimeout(()=>{
-    res("task comeplete");
-  },3000)
-})
-console.log(promise)
-promise.then((data)=>{
-  console.log(data)
-}
-)
+// const promise = new Promise((res,rej)=>{
+//   setTimeout(()=>{
+//     res("task comeplete");
+//   },3000)
+// })
+// console.log(promise)
+// promise.then((data)=>{
+//   console.log(data)
+// }
+// )
 
-setTimeout(()=>{
-  console.log(promise)
-},4000)
+// setTimeout(()=>{
+//   console.log(promise)
+// },4000)
+
+
